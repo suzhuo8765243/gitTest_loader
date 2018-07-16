@@ -1,0 +1,102 @@
+/* 组件化加载动画 标准板页
+<div class="loader">
+    <i><span></span></i> 
+    <i><span></span></i>
+    <i><span></span></i>
+    <i><span></span></i>
+    <i><span></span></i>
+    <i><span></span></i>
+    <i><span></span></i>
+    <i><span></span></i>
+</div>
+ */
+
+.loader {
+    width: 50px;
+    height: 50px;
+    margin: 200px auto;
+    border-radius: 50%;
+    position: relative;
+}
+.loader i {
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+}
+span {
+    width: 10px;
+    height: 10px;
+    float: right;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.loader:hover i {
+    height: 40px;
+    top: -15px;
+}
+.loader:hover span {
+    width: 15px;
+    height: 15px;
+}
+.loader i:nth-child(2) {
+    transform-origin: bottom center;
+    transform: rotate(45deg);  
+}
+.loader i:nth-child(3) {
+    transform-origin: bottom center;
+    transform: rotate(90deg); 
+}
+.loader i:nth-child(4) {
+    transform-origin: bottom center;
+    transform: rotate(135deg); 
+}
+.loader i:nth-child(5) {
+    transform-origin: bottom center;
+    transform: rotate(180deg); 
+}
+.loader i:nth-child(6) {
+    transform-origin: bottom center;
+    transform: rotate(225deg); 
+}
+.loader i:nth-child(7) {
+    transform-origin: bottom center;
+    transform: rotate(270deg); 
+}
+.loader i:nth-child(8) {
+    transform-origin: bottom center;
+    transform: rotate(315deg); 
+}
+
+.loader i:nth-child(1) span {
+    animation: form_loader 1.6s linear 0.2s infinite; 
+}
+.loader i:nth-child(2) span {
+    animation: form_loader 1.6s linear 0.4s infinite; 
+}
+.loader i:nth-child(3) span {
+    animation: form_loader 1.6s linear 0.6s infinite; 
+}
+.loader i:nth-child(4) span {
+    animation: form_loader 1.6s linear 0.8s infinite; 
+}
+.loader i:nth-child(5) span {
+    animation: form_loader 1.6s linear 1s infinite; 
+}
+.loader i:nth-child(6) span {
+    animation: form_loader 1.6s linear 1.2s infinite; 
+}
+.loader i:nth-child(7) span {
+    animation: form_loader 1.6s linear 1.4s infinite; 
+}
+.loader i:nth-child(8) span {
+    animation: form_loader 1.6s linear 1.6s infinite; 
+}
+
+@keyframes form_loader {
+    form {background-color: rgba(0, 0, 0, 1)}
+    to {background-color: rgba(0, 0, 0, 0.2)}
+}
